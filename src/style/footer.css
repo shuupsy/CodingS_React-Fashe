@@ -7,9 +7,8 @@ footer {
 .ftr-1 {
     display: grid;
     grid-template-columns: 40% 1fr 1fr;
-    padding: 5vh 20vh;
+    padding: 10vh 20vh;
     justify-content: center;
-    align-items: center;
     gap: 15vh;
 }
 
@@ -23,11 +22,11 @@ footer {
 }
 
 
-.ftr-1 section:first-child {
+#intouch {
     text-align: center;
 }
 
-.ftr-1 section:first-child ul {
+#intouch ul {
     display: flex;
     justify-content: center;
     gap: 5vh;
@@ -36,4 +35,8 @@ footer {
 .ftr-2 {
     text-align: center;
     padding: 5vh;
+}
+
+footer section li {
+    padding: 5px 0;
 }

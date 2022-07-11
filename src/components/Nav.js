@@ -9,9 +9,9 @@ const Nav = () => {
             <img src={logo} alt='logo fashe'/>
             <ul>
                 <Link className='active' to='/'>Home</Link>
-                <Link to={'./Products'}>Product</Link>
-                <Link to={'./About'}>About</Link>
-                <Link to={'./Contact'}>Contact</Link>
+                <Link to={'/products'}>Product</Link>
+                <Link to={'/about'}>About</Link>
+                <Link to={'/contact'}>Contact</Link>
             </ul>
             <ul className='icones'>
                 <li><BsHeart /></li>

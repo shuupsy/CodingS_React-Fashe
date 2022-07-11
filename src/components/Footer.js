@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='ftr-1'>
-                <section>
+                <div id='intouch'>
                     <h4>GET IN TOUCH</h4>
                     <p>Any questions ? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879</p>
                     <ul>
@@ -19,10 +19,11 @@ const Footer = () => {
                         <li><FaSnapchatGhost /></li>
                         <li><FaYoutube /></li>
                 </ul>
-                </section>
+                </div>
                 <FooterSection />
                 <FooterSection />
             </div>
+            
             <div className='ftr-2'>
                 <img src={logopay} alt='logos modes paiement'/>
                 <p>Copyright © All rights reserved.</p>
