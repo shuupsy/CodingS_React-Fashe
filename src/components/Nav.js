@@ -5,10 +5,10 @@ import {BsHeart, BsBag} from 'react-icons/bs'
 
 const Nav = () => {
     return ( 
-        <nav className="nav">
+        <nav>
             <img src={logo} alt='logo fashe'/>
             <ul>
-                <Link to='/'>Home</Link>
+                <Link className='active' to='/'>Home</Link>
                 <Link to={'./Products'}>Product</Link>
                 <Link to={'./About'}>About</Link>
                 <Link to={'./Contact'}>Contact</Link>

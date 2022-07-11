@@ -11,3 +11,7 @@ nav ul, .icones{
     align-items: center;
     gap: 3vh;
 }
+
+.active {
+    color: #E65540;
+}

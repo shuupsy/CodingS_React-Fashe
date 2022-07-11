@@ -1,0 +1,40 @@
+footer {
+    background-color: #F0F0F0;
+    color: grey;
+    font-size: 14px;
+}
+
+.ftr-1 {
+    height: 30vh;
+    display: grid;
+    grid-template-columns: 45% 1fr 1fr;
+    padding: 5vh 20vh;
+    justify-content: center;
+    align-items: center;
+    gap: 15vh;
+}
+
+.ftr-1 h4 {
+    color: black;
+    margin-bottom: 5vh;
+}
+
+.ftr-1 ul {
+    margin-top: 5vh;
+}
+
+
+.ftr-1 section:first-child {
+    text-align: center;
+}
+
+.ftr-1 section:first-child ul {
+    display: flex;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.ftr-2 {
+    text-align: center;
+    padding: 5vh;
+}
