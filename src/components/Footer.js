@@ -1,6 +1,6 @@
 import '../style/footer.css'
 import logopay from '../img/logo-paiement.png'
-import FooterSection from '../components/FooterSection';
+import FooterSection from './FooterSection';
 
 // Import Fontawesome
 import { FaFacebookF, FaInstagram, FaPinterestP, FaSnapchatGhost, FaYoutube } from 'react-icons/fa'

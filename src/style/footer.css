@@ -5,9 +5,8 @@ footer {
 }
 
 .ftr-1 {
-    height: 30vh;
     display: grid;
-    grid-template-columns: 45% 1fr 1fr;
+    grid-template-columns: 40% 1fr 1fr;
     padding: 5vh 20vh;
     justify-content: center;
     align-items: center;

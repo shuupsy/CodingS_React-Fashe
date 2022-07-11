@@ -4,7 +4,7 @@ import './App.css';
 
 // Import des autres pages
 import Nav from './components/Nav'
-import Footer from './pages/Footer';
+import Footer from './components/Footer';
 import About from './pages/About'
 import Coeur from './pages/Coeur'
 import Contact from './pages/Contact'
