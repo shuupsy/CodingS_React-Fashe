@@ -1,0 +1,18 @@
+.containerAbout{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.containerAbout p {
+    width: 600px;
+    margin: 40px;
+}
+.containerAbout h1{
+    margin: 40px;
+}
+.containerAbout img{
+    width: 100%;
+}
+.aboutImg{
+    width: 400px;
+}
