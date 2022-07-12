@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -13,7 +13,7 @@ import Products from './pages/Products'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path='/panier' element={<Panier />} />
         <Route path='/favoris' element={<Coeur />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
