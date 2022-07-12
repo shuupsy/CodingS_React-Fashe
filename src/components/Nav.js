@@ -1,17 +1,17 @@
 import '../style/nav.css'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import logo from '../img/logo.png'
 import {BsHeart, BsBag} from 'react-icons/bs'
 
 const Nav = () => {
     return ( 
         <nav>
-            <img src={logo} alt='logo fashe'/>
+            <Link to='/'><img src={logo} alt='logo fashe'/></Link>
             <ul>
-                <Link className='active' to='/'>Home</Link>
-                <Link to={'/products'}>Product</Link>
-                <Link to={'/about'}>About</Link>
-                <Link to={'/contact'}>Contact</Link>
+                <NavLink to='/' activeClassName='active'>Home</NavLink>
+                <NavLink to={'/products'} activeClassName='active'>Product</NavLink>
+                <NavLink to={'/about'} activeClassName='active'>About</NavLink>
+                <NavLink to={'/contact'} activeClassName='active'>Contact</NavLink>
             </ul>
             <ul className='icones'>
                 <li><BsHeart /></li>
