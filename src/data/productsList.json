@@ -29,7 +29,7 @@
     },
     {
         "name" : "sac",
-        "price" : 55,
+        "price" : 60,
         "category": "men",
         "bestseller": false,
         "collection": "new"
