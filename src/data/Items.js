@@ -30,7 +30,7 @@ export const items = [
         category: "accessories",
         bestseller: true,
         collection: "old",
-        sale: true,
+        sale: false,
         image : item2
     },
     {   
@@ -49,7 +49,7 @@ export const items = [
         price : 35,
         category: "accessories",
         bestseller: false,
-        collection: "new",
+        collection: "old",
         sale: false,
         image : item4
     },

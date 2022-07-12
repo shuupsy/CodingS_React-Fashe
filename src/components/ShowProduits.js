@@ -13,9 +13,17 @@ const ShowProduits = () => {
                     <div className="card-img">
                         <img src={item.image} alt={'photo produit' + item.nom} />
                     </div>
+                {item.collection === 'new' && <span className="collection">New</span>} 
+
+                {item.sale? <span className="sale">Sale</span> : null}
+                
                     <div className="card-body">
                         <h4>{item.name}</h4>
-                        <p>{item.price}€</p>
+
+                {item.sale? <p className="solde"><span className="nosale">{item.price}€</span>&nbsp;
+                {item.price * 0.8}€</p>
+                : <p>{item.price}€</p>}
+                       
                     </div>
                 </div>
                 
