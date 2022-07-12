@@ -1,0 +1,54 @@
+.boxHome{
+    height: 300px;
+    width: 300px;
+    margin: 30px;
+    background-position: center;
+    background-size: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: 200ms;
+}
+.boxHome:hover{
+    background-size: 120%;
+}
+.containerBox{
+    display: flex;
+    justify-content: center;
+}
+.banner1::after, .banner2::after,.banner3::after{
+    position: absolute;
+    content: " ";
+    height: 50px;
+    width: 120px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 10px 13px 16px -5px rgba(0,0,0,0.31);
+}
+.banner1{
+    background-image: url("../img/banner-03.webp");
+}
+.banner1::after{
+    content:"MONTRE";
+}
+.banner2::after{
+    content: "SAC";
+}
+.banner3::after{
+    content: "LUNETTE";
+}
+.banner2{
+    background-image: url("../img/banner-04.webp");
+}
+.banner3{
+    background-image: url("../img/banner-05.webp");
+}
+.containerFix{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}

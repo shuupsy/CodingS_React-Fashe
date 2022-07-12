@@ -1,0 +1,27 @@
+.videoImg{
+    background-image: url("../img/795866.jpg");
+    height: 500px;
+    width: 70%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+}
+.containerVideo{
+    display: flex;
+    justify-content: center;
+}
+.btnVideo{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    border-radius: 10px;
+}
+.btnVideo:hover{
+    background-color: rgb(226, 226, 226);
+    color: black;
+}
