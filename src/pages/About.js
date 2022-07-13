@@ -8,7 +8,7 @@ const About = () => {
             <Nav />
             <div className='containerAbout'>
                 <div className='aboutImg'>
-                    <img src={aboutImg} />
+                    <img src={aboutImg} alt='presentation about' />
                 </div>
                 <div>
                     <h1>Our story</h1>
