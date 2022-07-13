@@ -4,16 +4,16 @@ import ShowProduits from '../components/ShowProduits'
 import {items} from "../data/Items";
 import { BsSearch } from 'react-icons/bs'
 import '../style/products.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Products = () => {
 
+    let [nbrCard, setNbrCard] = useState(document.querySelectorAll('.card').length)
+    
     const [activeCategory, setActiveCategory] = useState('')
     const [search, setSearch] = useState('')
 
-    const Filter = (x) => {
-        setActiveCategory(x)
-    }
+    useEffect(() => setNbrCard(document.querySelectorAll('.card').length), [activeCategory])
 
     return (
         <>
@@ -24,11 +24,11 @@ const Products = () => {
                     <div className='categories'>
                         <h2>Categories</h2>
                         <ul>
-                            <li onClick={() => Filter('')}>All</li>
-                            <li onClick={() => Filter('women')}>Women</li>
-                            <li onClick={() => Filter('kids')}>Kids</li>
-                            <li onClick={() => Filter('men')}>Men</li>
-                            <li onClick={() => Filter('accessories')}>Accessories</li>
+                            <li onClick={() => setActiveCategory('')}>All</li>
+                            <li onClick={() => setActiveCategory('women')}>Women</li>
+                            <li onClick={() => setActiveCategory('kids')}>Kids</li>
+                            <li onClick={() => setActiveCategory('men')}>Men</li>
+                            <li onClick={() => setActiveCategory('accessories')}>Accessories</li>
                         </ul>
                     </div>
                     <div className='search'>
@@ -41,7 +41,7 @@ const Products = () => {
                 </div>
 
                 <div className='list'>
-                    <h3>Nombre de produits trouvés : {items.length}</h3>
+                    <h3>Nombre de produits trouvés : {nbrCard}</h3>
                     <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
                 </div>
             </div>

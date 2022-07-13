@@ -10,8 +10,8 @@ const ShowProduits = ({ activeCategory, setActiveCategory }) => {
             {items.map(({id, image, name, price, sale, category, collection}) => (
 
                 !activeCategory || activeCategory === category ? 
-                
-                (items.filter(item => item.category === category), 
+
+                (items.filter(item => item.category === activeCategory), 
                 (<Card id={id} image={image} name={name} price={price} sale={sale} collection={collection} />))
                 : null
 
