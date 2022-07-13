@@ -1,11 +1,14 @@
 import Nav from '../components/Nav'
+import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import "../style/about.css"
 import aboutImg from "../img/about_story.webp"
+
 const About = () => {
     return (
         <div className="about">
             <Nav />
+            <Banner title='ABOUT' />
             <div className='containerAbout'>
                 <div className='aboutImg'>
                     <img src={aboutImg} alt='presentation about' />

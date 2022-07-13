@@ -1,4 +1,5 @@
 import Nav from '../components/Nav'
+import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import Solde from '../components/Solde'
 import ShowProduits from '../components/ShowProduits'
@@ -19,6 +20,7 @@ const Products = () => {
         <>
             <Solde />
             <Nav />
+            <Banner title='PRODUCT' commentary='New Arrivals Women Collection' />
             <div className='products'>
 
                 <div className='menu'>
