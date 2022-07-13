@@ -1,7 +1,7 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import Solde from '../components/Solde'
 import ShowProduits from '../components/ShowProduits'
-import {items} from "../data/Items";
 import { BsSearch } from 'react-icons/bs'
 import '../style/products.css'
 import { useEffect, useState } from 'react';
@@ -17,6 +17,7 @@ const Products = () => {
 
     return (
         <>
+            <Solde />
             <Nav />
             <div className='products'>
 
