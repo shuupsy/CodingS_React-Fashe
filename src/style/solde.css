@@ -1,6 +1,8 @@
 #solde {
     background-color: #F5F5F5;
-    height: 7vh;
+    height: 5vh;
+    font-size: 0.8rem;
+    color: rgb(31, 30, 30);
     display: flex;
     justify-content: center;
     align-items: center;
