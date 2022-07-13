@@ -16,7 +16,7 @@ const ShowProduits = () => {
                 {item.collection === 'new' && <span className="collection">New</span>} 
 
                 {item.sale? <span className="sale">Sale</span> : null}
-                
+
                     <div className="card-body">
                         <h4>{item.name}</h4>
 
