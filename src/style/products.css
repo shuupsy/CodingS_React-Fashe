@@ -1,0 +1,46 @@
+.products {
+    margin: 5vh 15vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 5vh;
+}
+
+.products h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.products li {
+    color: rgb(31, 30, 30);
+    font-size: 0.8rem;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.categories, .search h2 {
+    margin-bottom: 5vh;
+}
+
+.search-area {
+    display: flex;
+    border: 1px solid rgb(172, 172, 172);
+}
+
+.search input, button {
+    padding: 10px;
+    background-color: white;
+    color: rgb(31, 30, 30);
+    border: none;
+}
+
+.search input:focus {
+    outline: 1px solid rgb(107, 106, 161);
+    z-index: 9999;
+}
+
+.list h3:first-child {
+    font-size: 0.8rem;
+    color: rgb(31, 30, 30);
+    font-weight: normal;
+    text-align: end;
+}

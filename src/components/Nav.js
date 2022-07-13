@@ -1,7 +1,7 @@
 import '../style/nav.css'
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../img/logo.png'
-import {BsHeart, BsBag} from 'react-icons/bs'
+import { BsHeart, BsBag } from 'react-icons/bs'
 
 const Nav = () => {
     return ( 
