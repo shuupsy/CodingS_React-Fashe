@@ -5,9 +5,9 @@
 }
 
 .fav-title {
-    padding: 0 5%;
+    padding: 2% 4%;
     display: grid;
-    grid-template-columns: 15% 20% 20% 25% 5% 5%;
+    grid-template-columns: 10% 20% 20% 25% 10% 1fr;
     gap: 15px;
 }
 

@@ -1,8 +1,7 @@
 import '../style/favitems.css'
-import { items } from '../data/Items';
 import { useState } from 'react';
 
-const FavItems = ({ item }) => {
+const FavItem = ({ fav, item }) => {
     
     const [inp, setInp] = useState(1)
 
@@ -20,7 +19,7 @@ const FavItems = ({ item }) => {
     }
 
     return ( 
-        <div className="fav-items" key={item.id}>
+        <div className="fav-items">
             <div className='item-img'>
                 <img src={item.image} alt='miniature produit'/>
             </div>
@@ -39,4 +38,4 @@ const FavItems = ({ item }) => {
     );
 }
  
-export default FavItems;
+export default FavItem;

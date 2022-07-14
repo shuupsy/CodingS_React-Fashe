@@ -39,7 +39,7 @@ function App() {
         <Route path='/products' element={<Products addCart={addCart} addFav={addFav} cart={cart} fav={fav} />}  />
 
         <Route path='/panier' element={<Panier />} />
-        <Route path='/coup-de-coeur' element={<Coeur />} fav={fav} />
+        <Route path='/coup-de-coeur' element={<Coeur fav={fav} />} />
       </Routes>
       <Footer />
     </>

@@ -1,14 +1,15 @@
 .fav-items {
-    padding: 2% 4%;
+    padding: 0.5% 4%;
+    margin: 0.5px 0;
     display: grid;
-    grid-template-columns: 15% 20% 20% 25% 5% 5%;
+    grid-template-columns: 10% 20% 20% 25% 10% 1fr;
     align-items: center;
     gap: 15px;
-    border: 1px solid grey;
+    border: 1px solid rgb(238, 230, 230);
 }
 
 .fav-items img {
-    width: 80%;
+    width: 100%;
 }
 
 .item-title {
