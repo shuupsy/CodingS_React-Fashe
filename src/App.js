@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import './App.css';
 // Import des autres pages
@@ -14,16 +15,29 @@ import Footer from './components/Footer';
 
 function App() {
 
+  const [cart, setCart] = useState([]);
+  const [fav, setFav] = useState([]);
+
+  let addCart = (x) => {
+      cart.push(x)
+      console.log(cart)
+  }
+
+  let addFav = (x) => {
+      fav.push(x)
+      console.log(fav)
+  }
+
   return (
     <>
-      <Nav />
+      <Nav fav={fav} cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/products' element={<Products />} />
         <Route path='/panier' element={<Panier />} />
-        <Route path='/coup-de-coeur' element={<Coeur />} />
+        <Route path='/coup-de-coeur' element={<Coeur />} fav={fav} />
       </Routes>
       <Footer />
     </>

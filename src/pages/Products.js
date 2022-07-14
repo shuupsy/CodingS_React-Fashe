@@ -9,9 +9,6 @@ import { useEffect, useState } from 'react';
 
 const Products = () => {
 
-    const [panier, setPanier] = useState([]);
-    const [fav, setFav] = useState([]);
-
     let [nbrCard, setNbrCard] = useState(document.querySelectorAll('.card').length)
 
     const [activeCategory, setActiveCategory] = useState('')
@@ -24,16 +21,6 @@ const Products = () => {
             setSearch(e.target.value)
             console.log(search)
         }
-    }
-
-    let addCart = (x) => {
-        panier.push(x)
-        console.log(panier)
-    }
-
-    let addFav = (x) => {
-        fav.push(x)
-        console.log(fav)
     }
 
     return (

@@ -1,7 +1,5 @@
-import Nav from '../components/Nav'
 import Banner from '../components/Banner';
 import FavItems from '../components/FavItems';
-import Footer from '../components/Footer'
 import '../style/coeur.css'
 
 const Coeur = () => {
