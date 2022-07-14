@@ -1,14 +1,14 @@
 .fav-items {
     padding: 2% 4%;
     display: grid;
-    grid-template-columns: 10% 20% 20% 30% 5% 5%;
+    grid-template-columns: 15% 20% 20% 25% 5% 5%;
     align-items: center;
     gap: 15px;
     border: 1px solid grey;
 }
 
 .fav-items img {
-    width: 100%;
+    width: 80%;
 }
 
 .item-title {
@@ -24,6 +24,11 @@
     height: 40px;
     text-align: center;
     background-color: #E6E6E6;
+    cursor: pointer;
+}
+
+.item-qty button:hover {
+    background-color: #0000002d;
 }
 
 .item-qty input {   

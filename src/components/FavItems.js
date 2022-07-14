@@ -6,6 +6,19 @@ const FavItems = () => {
     
     const [inp, setInp] = useState(1)
 
+    const decreaseItem = () => {
+        if (inp <= 1) {
+        } else {
+            setInp(inp-1)
+        }
+    }
+    const increaseItem = () => {
+        if (inp > 9) {
+        } else {
+            setInp(inp+1)
+        }
+    }
+
     return ( 
         <div className="fav-items">
             <div className='item-img'>
@@ -15,12 +28,12 @@ const FavItems = () => {
             <p>{items[0].price} €</p>
 
             <div className='item-qty'>
-                <button>-</button>
+                <button onClick={decreaseItem}>-</button>
                 <input min="1" max="10" value={inp} />
-                <button>+</button>
+                <button onClick={increaseItem}>+</button>
             </div>
 
-            <p>{items[0].price} €</p>
+            <p>{items[0].price * inp} €</p>
             <button className='item-add'>ADD</button>
         </div>
     );
