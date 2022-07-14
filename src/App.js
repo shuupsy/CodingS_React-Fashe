@@ -28,18 +28,37 @@ function App() {
       console.log(fav)
   }
 
+  const [inp, setInp] = useState(1)
+
+  const decreaseItem = () => {
+      if (inp <= 1) {
+      } else {
+          setInp(inp-1)
+      }
+  }
+  const increaseItem = () => {
+      if (inp > 9) {
+      } else {
+          setInp(inp+1)
+      }
+  }
+
   return (
     <>
       <Nav fav={fav} cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path='/about' element={<About />} />
+
         <Route path='/contact' element={<Contact />} />
 
         <Route path='/products' element={<Products addCart={addCart} addFav={addFav} cart={cart} fav={fav} />}  />
 
-        <Route path='/panier' element={<Panier />} />
-        <Route path='/coup-de-coeur' element={<Coeur fav={fav} />} />
+        <Route path='/panier' element={<Panier cart={cart} inp={inp} decreaseItem={decreaseItem} increaseItem={increaseItem}/>} />
+
+        <Route path='/coup-de-coeur' element={<Coeur fav={fav} inp={inp} decreaseItem={decreaseItem} increaseItem={increaseItem} />} />
+
       </Routes>
       <Footer />
     </>

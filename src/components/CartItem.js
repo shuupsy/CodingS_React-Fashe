@@ -1,11 +1,11 @@
-import '../style/fav-item.css'
+import '../style/cart-item.css'
 import Quantity from './Quantity';
 
 
-const FavItem = ({ fav, item, increaseItem, decreaseItem, inp }) => {
+const CartItem = ({ cart, item, increaseItem, decreaseItem, inp }) => {
     
     return ( 
-        <div className="fav-items">
+        <div className="cart-items">
             <div className='item-img'>
                 <img src={item.image} alt='miniature produit'/>
             </div>
@@ -15,9 +15,8 @@ const FavItem = ({ fav, item, increaseItem, decreaseItem, inp }) => {
             <Quantity inp={inp} decreaseItem={decreaseItem} increaseItem={increaseItem}/>
 
             <p>{item.price * inp} €</p>
-            <button className='item-add'>ADD</button>
         </div>
     );
 }
  
-export default FavItem;
+export default CartItem;
