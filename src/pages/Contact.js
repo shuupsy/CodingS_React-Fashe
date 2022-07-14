@@ -6,7 +6,6 @@ import '../style/contact.css'
 const Contact = () => {
     return (
         <>
-            <Nav />
             <Banner title='CONTACT' />
             <div className='contact'>
                 <div className="map">
@@ -22,7 +21,6 @@ const Contact = () => {
                     </form>
 
             </div>
-            <Footer />
         </>
      );
 }

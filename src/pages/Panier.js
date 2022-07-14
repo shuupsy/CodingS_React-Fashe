@@ -5,10 +5,8 @@ import Footer from '../components/Footer'
 const Panier = () => {
     return (
         <div className="panier">
-            <Nav />
             <Banner />
             <h1>PANIER</h1>
-            <Footer />
         </div>
     );
 }

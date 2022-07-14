@@ -7,7 +7,6 @@ import '../style/coeur.css'
 const Coeur = () => {
     return ( 
         <div className="coeur">
-            <Nav />
             <Banner title='COUP DE COEUR' />
 
             <div className='fav-container'>
@@ -26,7 +25,6 @@ const Coeur = () => {
 
             </div>
 
-            <Footer />
         </div> );
 }
  

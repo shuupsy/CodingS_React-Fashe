@@ -2,17 +2,17 @@ import {items} from "../data/Items";
 import '../style/showproduits.css';
 import Card from '../components/Card'
 
-const ShowProduits = ({ activeCategory, setActiveCategory, search, setSearch }) => {
+const ShowProduits = ({ activeCategory, setActiveCategory, search, setSearch, addCart, addFav}) => {
 
     return ( 
         <div className='container'>
 
-            {items.map(({id, image, name, price, sale, category, collection}) => (
+            {items.map((item) => (
 
-                (!activeCategory || activeCategory === category ? 
+                (!activeCategory || activeCategory === item.category ? 
 
                     (items.filter(item => item.category === activeCategory), 
-                    (<Card id={id} image={image} name={name} price={price} sale={sale} collection={collection} />))
+                    (<Card item={item} addCart={addCart} addFav={addFav} />))
                     : null)
 
             ) 

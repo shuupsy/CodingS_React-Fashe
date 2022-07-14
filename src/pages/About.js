@@ -7,7 +7,6 @@ import aboutImg from "../img/about_story.webp"
 const About = () => {
     return (
         <div className="about">
-            <Nav />
             <Banner title='ABOUT' />
             <div className='containerAbout'>
                 <div className='aboutImg'>
@@ -19,7 +18,6 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

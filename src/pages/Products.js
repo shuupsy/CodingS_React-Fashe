@@ -9,8 +9,11 @@ import { useEffect, useState } from 'react';
 
 const Products = () => {
 
+    const [panier, setPanier] = useState([]);
+    const [fav, setFav] = useState([]);
+
     let [nbrCard, setNbrCard] = useState(document.querySelectorAll('.card').length)
-    
+
     const [activeCategory, setActiveCategory] = useState('')
     const [search, setSearch] = useState('')
 
@@ -23,10 +26,19 @@ const Products = () => {
         }
     }
 
+    let addCart = (x) => {
+        panier.push(x)
+        console.log(panier)
+    }
+
+    let addFav = (x) => {
+        fav.push(x)
+        console.log(fav)
+    }
+
     return (
         <>
             <Solde />
-            <Nav />
             <Banner title='PRODUCT' commentary='New Arrivals New Collection' />
             <div className='products'>
 
@@ -44,20 +56,19 @@ const Products = () => {
                     <div className='search'>
                         <h2>Filter</h2>
                         <div className='search-area'>
-                            <input type='text' placeholder='Search Products...' onKeyPress={e => searchTerm(e)}/>
-                            <button><BsSearch/></button>
+                            <input type='text' placeholder='Search Products...' onKeyPress={e => searchTerm(e)} />
+                            <button><BsSearch /></button>
                         </div>
                     </div>
                 </div>
 
                 <div className='list'>
                     <h3>Nombre de produits trouvés : {nbrCard}</h3>
-                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} />
+                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} panier={panier} addCart={addCart} fav={fav} addFav={addFav}/>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }
- 
+
 export default Products;

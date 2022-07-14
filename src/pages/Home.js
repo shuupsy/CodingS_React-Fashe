@@ -6,11 +6,9 @@ import Video from './video';
 const Home = () => {
     return ( 
         <div className="home">
-            <Nav />
             <Carousel/>
             <CardHome/>
             <Video/>
-            <Footer />
         </div>
      );
 }
