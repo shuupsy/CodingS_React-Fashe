@@ -1,0 +1,16 @@
+.fav-container {
+    margin: 5vh 15vh;
+    display: grid;
+    gap: 10px;
+}
+
+.fav-title {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 30% 5% 5%;
+    gap: 15px;
+}
+
+.fav-title h3 {
+    font-size: 0.9rem;
+}

@@ -14,7 +14,7 @@ const Nav = () => {
                 <NavLink to={'/contact'} activeClassName='active'>Contact</NavLink>
             </ul>
             <ul className='icones'>
-                <li><BsHeart /></li>
+                <NavLink to={'/coup-de-coeur'}><BsHeart /></NavLink>
                 <li>|</li>
                 <li><BsBag /></li>
             </ul>

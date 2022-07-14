@@ -19,7 +19,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/products' element={<Products />} />
         <Route path='/panier' element={<Panier />} />
-        <Route path='/favoris' element={<Coeur />} />
+        <Route path='/coup-de-coeur' element={<Coeur />} />
       </Routes>
     </>
   );

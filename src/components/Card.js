@@ -1,8 +1,14 @@
 const Produit = ({ id, image, name, price, sale, collection }) => {
+
+    const Mouse = () => {
+        // let div = document.createElement('div')
+        console.log('rentré')
+    }
+
     return (
         <div key={id} className='card'>
 
-            <div className="card-img">
+            <div className="card-img" onMouseOver={Mouse}>
                 <img src={image} alt={'photo produit' + name} />
             </div>
 

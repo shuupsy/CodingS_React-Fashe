@@ -1,0 +1,40 @@
+.fav-items {
+    padding: 2% 4%;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 30% 5% 5%;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid grey;
+}
+
+.fav-items img {
+    width: 100%;
+}
+
+.item-title {
+    text-transform: capitalize;
+}
+
+.item-qty {
+    display: flex;
+}
+
+.item-qty button {
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    background-color: #E6E6E6;
+}
+
+.item-qty input {   
+    text-align: center;
+    width: 45px;
+    border: 2px solid #E6E6E6;
+}
+
+.fav-items .item-add {
+    width: 50px;
+    color: white;
+    background-color: black;
+    border-radius: 5vh;
+}

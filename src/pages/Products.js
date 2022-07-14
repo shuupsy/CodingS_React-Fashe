@@ -16,11 +16,18 @@ const Products = () => {
 
     useEffect(() => setNbrCard(document.querySelectorAll('.card').length), [activeCategory])
 
+    let searchTerm = (e) => {
+        if (e.key === 'Enter') {
+            setSearch(e.target.value)
+            console.log(search)
+        }
+    }
+
     return (
         <>
             <Solde />
             <Nav />
-            <Banner title='PRODUCT' commentary='New Arrivals Women Collection' />
+            <Banner title='PRODUCT' commentary='New Arrivals New Collection' />
             <div className='products'>
 
                 <div className='menu'>
@@ -37,7 +44,7 @@ const Products = () => {
                     <div className='search'>
                         <h2>Filter</h2>
                         <div className='search-area'>
-                            <input type='text' placeholder='Search Products...' onChange={(event) => {setSearch(event.target.value)}} />
+                            <input type='text' placeholder='Search Products...' onKeyPress={e => searchTerm(e)}/>
                             <button><BsSearch/></button>
                         </div>
                     </div>
@@ -45,7 +52,7 @@ const Products = () => {
 
                 <div className='list'>
                     <h3>Nombre de produits trouvés : {nbrCard}</h3>
-                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} />
                 </div>
             </div>
             <Footer />
