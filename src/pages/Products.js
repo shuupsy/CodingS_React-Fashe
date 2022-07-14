@@ -1,13 +1,11 @@
-import Nav from '../components/Nav'
 import Banner from '../components/Banner'
-import Footer from '../components/Footer'
 import Solde from '../components/Solde'
 import ShowProduits from '../components/ShowProduits'
 import { BsSearch } from 'react-icons/bs'
 import '../style/products.css'
 import { useEffect, useState } from 'react';
 
-const Products = () => {
+const Products = ({ fav, cart, addCart, addFav }) => {
 
     let [nbrCard, setNbrCard] = useState(document.querySelectorAll('.card').length)
 
@@ -51,7 +49,7 @@ const Products = () => {
 
                 <div className='list'>
                     <h3>Nombre de produits trouvés : {nbrCard}</h3>
-                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} panier={panier} addCart={addCart} fav={fav} addFav={addFav}/>
+                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} addCart={addCart} addFav={addFav} cart={cart} fav={fav} />
                 </div>
             </div>
         </>

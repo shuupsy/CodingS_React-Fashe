@@ -2,8 +2,7 @@ import { useState } from "react"
 import '../style/card.css'
 import { BsHeart } from 'react-icons/bs'
 
-const Produit = ({ item, addCart, addFav }) => {
-
+const Produit = ({ item, fav, cart, addCart, addFav }) => {
     const [isHover, setIsHover] = useState(false)
 
     const MouseOver = () => {
@@ -23,7 +22,7 @@ const Produit = ({ item, addCart, addFav }) => {
             {item.collection === 'new' && <span className="collection">New</span>}
             {item.sale ? <span className="sale">Sale</span> : null}
 
-            {isHover && <button className="add-cart" style={{ cursor: 'pointer'}} onClick={() => addCart(item)}>ADD TO CART</button>}
+            {isHover && <button className="add-cart" onClick={() => addCart(item)}>ADD TO CART</button>}
 
             {isHover && <span className="add-fav"  onClick={() => addFav(item)} ><BsHeart /></span>}
                 

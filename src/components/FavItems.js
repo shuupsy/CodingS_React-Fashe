@@ -2,7 +2,7 @@ import '../style/favitems.css'
 import { items } from '../data/Items';
 import { useState } from 'react';
 
-const FavItems = () => {
+const FavItems = ({ item }) => {
     
     const [inp, setInp] = useState(1)
 
@@ -20,12 +20,12 @@ const FavItems = () => {
     }
 
     return ( 
-        <div className="fav-items">
+        <div className="fav-items" key={item.id}>
             <div className='item-img'>
-                <img src={items[0].image} alt='miniature produit'/>
+                <img src={item.image} alt='miniature produit'/>
             </div>
-            <p className='item-title'>{items[0].name}</p>
-            <p>{items[0].price} €</p>
+            <p className='item-title'>{item.name}</p>
+            <p>{item.price} €</p>
 
             <div className='item-qty'>
                 <button onClick={decreaseItem}>-</button>
@@ -33,7 +33,7 @@ const FavItems = () => {
                 <button onClick={increaseItem}>+</button>
             </div>
 
-            <p>{items[0].price * inp} €</p>
+            <p>{item.price * inp} €</p>
             <button className='item-add'>ADD</button>
         </div>
     );

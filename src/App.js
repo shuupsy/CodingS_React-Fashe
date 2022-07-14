@@ -18,12 +18,12 @@ function App() {
   const [cart, setCart] = useState([]);
   const [fav, setFav] = useState([]);
 
-  let addCart = (x) => {
+  const addCart = (x) => {
       cart.push(x)
       console.log(cart)
   }
 
-  let addFav = (x) => {
+  const addFav = (x) => {
       fav.push(x)
       console.log(fav)
   }
@@ -35,7 +35,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/products' element={<Products />} />
+
+        <Route path='/products' element={<Products addCart={addCart} addFav={addFav} cart={cart} fav={fav} />}  />
+
         <Route path='/panier' element={<Panier />} />
         <Route path='/coup-de-coeur' element={<Coeur />} fav={fav} />
       </Routes>
