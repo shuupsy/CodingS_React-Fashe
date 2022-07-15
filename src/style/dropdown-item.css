@@ -1,0 +1,29 @@
+.drop-item {
+    display: flex;
+    gap: 15px;
+}
+
+.drop-text {
+    text-align: start;
+}
+.drop-img {
+    width: 60px;
+    height: 60px;
+}
+
+.drop-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drop-text h2 {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.drop-text h3 {
+    font-size: 0.6rem;
+    font-weight: normal;
+    color: grey;
+} 

@@ -1,9 +1,22 @@
-import '../style/nav.css'
 import { NavLink, Link } from 'react-router-dom'
-import logo from '../img/logo.png'
 import { BsHeart, BsBag } from 'react-icons/bs'
+import { useState } from 'react'
+import '../style/nav.css'
+import logo from '../img/logo.png'
 
-const Nav = () => {
+import DropdownItem from './DropdownItem'
+
+const Nav = ({cart}) => {
+    const [isDropdown, setIsDropdown] = useState(false)
+
+    const showDropdown = () => {
+        if (isDropdown === false) {
+            setIsDropdown(true)
+        } else {
+            setIsDropdown(false)
+        }
+    }
+
     return ( 
         <nav>
             <Link to='/'><img src={logo} alt='logo fashe'/></Link>
@@ -16,9 +29,16 @@ const Nav = () => {
             <ul className='icones'>
                 <NavLink to={'/coup-de-coeur'}><BsHeart /></NavLink>
                 <li>|</li>
-                <NavLink to={'/panier'}><BsBag /></NavLink>
-                {/* <li><BsBag /></li> */}
+                <li onClick={showDropdown}><BsBag /></li>
             </ul>
+
+        {isDropdown && <div className='dropdown'>
+            {cart.map(di => <DropdownItem di={di} /> )}
+            <p>Total : {cart.reduce((x, y) => y.price + x, 0)} €</p>
+            <Link to='/panier'><button>VIEW CART</button></Link>
+            
+        </div>}
+
         </nav>
      );
 }

@@ -5,6 +5,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2vh 5vh;
+    position: relative;
 }
 
 nav ul, .icones{
@@ -15,4 +16,29 @@ nav ul, .icones{
 
 .active {
     color: #E65540;
+}
+
+.dropdown {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-top: 2px solid rgb(221, 219, 219);
+    background-color: white;
+    text-align: center;
+    overflow-x: scroll;
+    padding: 3vh;
+    width: 40vh;
+    height: 40vh;
+    position: absolute;
+    right: 3%;
+    top: 100%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.dropdown button {
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+    width: 125px;
 }
