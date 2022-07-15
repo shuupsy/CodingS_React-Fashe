@@ -1,7 +1,7 @@
 .banner {
     background-image: url('../img/collection_top.webp');
     background-size: cover;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +12,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-weight: bold;
+    margin-top: 15vh;
 }
 
 .banner p {
