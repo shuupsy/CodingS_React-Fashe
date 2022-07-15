@@ -5,6 +5,7 @@
 .card-img img {
     width: 100%;
     height: 350px;
+    object-fit: cover;
 }
 
 .card-body h4, p {
@@ -22,7 +23,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 99999;
+    z-index: 99;
 }
 
 .collection {

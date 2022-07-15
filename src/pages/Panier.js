@@ -22,7 +22,8 @@ const Panier = ({ cart, addCart, removeCart }) => {
             </div>
 
             <div className='total'>
-                <p>TOTAL : <span id='somme'>{cart.reduce((x, y) => y.price + x, 0)} €</span></p>
+                <p>TOTAL : <span id='somme'>{cart.reduce((x, y) => 
+                 y.price + x, 0)} €</span></p>
 
                 <button id='payment'>PROCEED TO PAYMENT</button>
             </div>

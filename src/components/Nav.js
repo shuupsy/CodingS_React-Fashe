@@ -6,17 +6,7 @@ import logo from '../img/logo.png'
 
 import DropdownItem from './DropdownItem'
 
-const Nav = ({cart}) => {
-    const [isDropdown, setIsDropdown] = useState(false)
-
-    const showDropdown = () => {
-        if (isDropdown === false) {
-            setIsDropdown(true)
-        } else {
-            setIsDropdown(false)
-        }
-    }
-
+const Nav = ({cart, isDropdown, showDropdown}) => {
     return ( 
         <nav>
             <Link to='/'><img src={logo} alt='logo fashe'/></Link>
@@ -29,7 +19,10 @@ const Nav = ({cart}) => {
             <ul className='icones'>
                 <NavLink to={'/coup-de-coeur'}><BsHeart /></NavLink>
                 <li>|</li>
-                <li onClick={showDropdown}><BsBag /></li>
+                <li onClick={showDropdown} className='icon-cart'>
+                    <BsBag />
+                    <span className='number-items'>{cart.length}</span>
+                </li>
             </ul>
 
         {isDropdown && <div className='dropdown'>

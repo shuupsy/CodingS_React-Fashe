@@ -8,7 +8,10 @@ const DropdownItem = ({ di }) => {
             </div>
             <div className="drop-text">
                 <h2>{di.name}</h2>
-                <h3>{di.price}€</h3>
+
+                {di.sale ? <p className="solde"><span className="nosale">{di.price}€</span>&nbsp; {di.price * 0.8}€</p>
+            : <p>{di.price} €</p>}
+
             </div>
         </div>
     );

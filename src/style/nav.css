@@ -14,6 +14,23 @@ nav ul, .icones{
     gap: 3vh;
 }
 
+.icon-cart {
+    position: relative;
+    text-align: center;
+}
+
+.number-items{
+    background-color: #E65540;
+    color: white;
+    width: 15px;
+    height: 15px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -3;
+}
+
 .active {
     color: #E65540;
 }

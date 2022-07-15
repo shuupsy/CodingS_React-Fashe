@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 // Import des autres pages
@@ -17,6 +17,17 @@ function App() {
 
   const [cart, setCart] = useState([]);
   const [fav, setFav] = useState([]);
+
+  const [isDropdown, setIsDropdown] = useState(false)
+
+    const showDropdown = () => {
+        if (isDropdown === true) {
+            setIsDropdown(false)
+        } else {
+            setIsDropdown(true)
+        }
+    }
+
 
   const addCart = (x) => {
       cart.push(x)
@@ -37,10 +48,11 @@ function App() {
       console.log(fav)
   }
 
+  useEffect(() => setCart(cart), [cart])
 
   return (
     <>
-      <Nav fav={fav} cart={cart} />
+      <Nav fav={fav} cart={cart} isDropdown={isDropdown}  showDropdown={showDropdown} />
       <Routes>
         <Route path="/" element={<Home />} />
 
