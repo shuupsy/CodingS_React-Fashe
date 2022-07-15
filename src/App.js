@@ -51,10 +51,14 @@ function App() {
   }
 
   const removeFav = (x) => {
-    addCart(x)
     let temporaryFav = [...fav]
     temporaryFav = temporaryFav.filter(y => y.id !== x.id)
     setFav(temporaryFav)
+  }
+
+  const addCartFromFav = (x) => {
+    addCart(x)
+    removeFav(x)
   }
 
 
@@ -73,7 +77,7 @@ function App() {
 
         <Route path='/panier' element={<Panier cart={cart} addCart={addCart} removeCart={removeCart} />} />
 
-        <Route path='/coup-de-coeur' element={<Coeur fav={fav} removeFav={removeFav} />} />
+        <Route path='/coup-de-coeur' element={<Coeur fav={fav} removeFav={removeFav} addCartFromFav={addCartFromFav} />} />
 
       </Routes>
       <Footer />

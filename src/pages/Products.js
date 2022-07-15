@@ -1,5 +1,4 @@
 import Banner from '../components/Banner'
-import Solde from '../components/Solde'
 import ShowProduits from '../components/ShowProduits'
 import { BsSearch } from 'react-icons/bs'
 import '../style/products.css'
@@ -23,7 +22,6 @@ const Products = ({ fav, cart, addCart, addFav }) => {
 
     return (
         <>
-            <Solde />
             <Banner title='PRODUCT' commentary='New Arrivals New Collection' />
             <div className='products'>
 
