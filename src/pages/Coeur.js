@@ -2,7 +2,7 @@ import Banner from '../components/Banner';
 import FavItem from '../components/FavItem';
 import '../style/coeur.css'
 
-const Coeur = ({ fav, removeFav }) => {
+const Coeur = ({ fav, removeFav, addCartFromFav }) => {
     return ( 
         <div className="coeur">
             <Banner title='COUP DE COEUR' />
@@ -18,7 +18,7 @@ const Coeur = ({ fav, removeFav }) => {
                 </div>
                 <div className='items-container'>
                     {fav.map(item => 
-                        <FavItem item={item} removeFav={removeFav} />)}
+                        <FavItem item={item} removeFav={removeFav}  addCartFromFav={addCartFromFav}/>)}
                         
                 </div>
 

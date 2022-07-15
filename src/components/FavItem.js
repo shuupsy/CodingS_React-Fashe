@@ -2,12 +2,13 @@ import '../style/fav-item.css'
 import { useState } from 'react';
 
 
-const FavItem = ({ fav, item, removeFav }) => {
+const FavItem = ({ item, removeFav, addCartFromFav }) => {
 
     const [inp, setInp] = useState(1)
 
-    const decreaseItem = () => {
+    const decreaseItem = (x) => {
         if (inp <= 1) {
+            removeFav(x)
         } else {
             setInp(inp - 1)
         }
@@ -30,7 +31,7 @@ const FavItem = ({ fav, item, removeFav }) => {
             : <p>{item.price} €</p>}
 
             <div className='item-qty'>
-                <button onClick={decreaseItem}>-</button>
+                <button onClick={()=> decreaseItem(item)}>-</button>
                 <input min="1" max="10" value={inp} />
                 <button onClick={increaseItem}>+</button>
             </div>
@@ -38,7 +39,7 @@ const FavItem = ({ fav, item, removeFav }) => {
             {item.sale ? <p className="solde"><span className="nosale">{item.price * inp}€</span>&nbsp; {item.price * 0.8 * inp}€</p>
             : <p>{item.price * inp} €</p>}
             
-            <button className='item-add' onClick={() => removeFav(item)}>ADD</button>
+            <button className='item-add' onClick={() => addCartFromFav(item)}>ADD</button>
         </div>
     );
 }
