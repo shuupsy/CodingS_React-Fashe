@@ -31,13 +31,16 @@ function App() {
 
   const addCart = (x) => {
       setCart([...cart, x])
-      console.log('Objet ajouté')
+      console.log('produit ajouté')
       console.log(cart)
   }
 
   const removeCart = (x) => {
-    setCart(cart.splice(cart.indexOf(x),1));
-    setCart(cart)
+    let temporaryCart = [...cart]
+    temporaryCart = temporaryCart.filter(y => y.id !== x.id)
+    // setCart(cart.splice(cart.indexOf(x),1));
+    // setCart(cart)
+    setCart(temporaryCart)
     console.log('Objet supprimé')
     console.log(cart)
   }
@@ -47,10 +50,18 @@ function App() {
       console.log(fav)
   }
 
+  const removeFav = (x) => {
+    addCart(x)
+    let temporaryFav = [...fav]
+    temporaryFav = temporaryFav.filter(y => y.id !== x.id)
+    setFav(temporaryFav)
+  }
+
 
   return (
     <>
       <Nav fav={fav} cart={cart} isDropdown={isDropdown}  showDropdown={showDropdown} />
+      
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -62,7 +73,7 @@ function App() {
 
         <Route path='/panier' element={<Panier cart={cart} addCart={addCart} removeCart={removeCart} />} />
 
-        <Route path='/coup-de-coeur' element={<Coeur fav={fav} />} />
+        <Route path='/coup-de-coeur' element={<Coeur fav={fav} removeFav={removeFav} />} />
 
       </Routes>
       <Footer />

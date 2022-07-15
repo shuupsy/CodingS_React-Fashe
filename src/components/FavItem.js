@@ -2,7 +2,7 @@ import '../style/fav-item.css'
 import { useState } from 'react';
 
 
-const FavItem = ({ fav, item }) => {
+const FavItem = ({ fav, item, removeFav }) => {
 
     const [inp, setInp] = useState(1)
 
@@ -38,7 +38,7 @@ const FavItem = ({ fav, item }) => {
             {item.sale ? <p className="solde"><span className="nosale">{item.price * inp}€</span>&nbsp; {item.price * 0.8 * inp}€</p>
             : <p>{item.price * inp} €</p>}
             
-            <button className='item-add'>ADD</button>
+            <button className='item-add' onClick={() => removeFav(item)}>ADD</button>
         </div>
     );
 }
