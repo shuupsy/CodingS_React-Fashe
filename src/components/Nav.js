@@ -16,7 +16,8 @@ const Nav = () => {
             <ul className='icones'>
                 <NavLink to={'/coup-de-coeur'}><BsHeart /></NavLink>
                 <li>|</li>
-                <li><BsBag /></li>
+                <NavLink to={'/panier'}><BsBag /></NavLink>
+                {/* <li><BsBag /></li> */}
             </ul>
         </nav>
      );

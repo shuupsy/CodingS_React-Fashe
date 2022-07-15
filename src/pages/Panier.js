@@ -1,7 +1,9 @@
 import Banner from '../components/Banner';
 import CartItem from '../components/CartItem';
+import '../style/panier.css'
 
-const Panier = ({ cart, inp, increaseItem, decreaseItem }) => {
+const Panier = ({ cart }) => {
+
     return (
         <div className="panier">
             <Banner title='PANIER' />
@@ -16,7 +18,7 @@ const Panier = ({ cart, inp, increaseItem, decreaseItem }) => {
                 </div>
                 <div className='items-container'>
                     {cart.map(item =>
-                    <CartItem item={item} inp={inp} decreaseItem={decreaseItem} increaseItem={increaseItem}/>)} 
+                    <CartItem item={item} />)} 
                 </div>
             
                 </div>

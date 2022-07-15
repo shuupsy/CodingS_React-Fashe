@@ -1,22 +1,42 @@
 import '../style/cart-item.css'
-import Quantity from './Quantity';
+import { useState } from 'react';
 
 
-const CartItem = ({ cart, item, increaseItem, decreaseItem, inp }) => {
-    
-    return ( 
+const CartItem = ({ cart, item }) => {
+
+    const [inp, setInp] = useState(1)
+
+    const decreaseItem = () => {
+        if (inp <= 1) {
+        } else {
+            setInp(inp - 1)
+        }
+    }
+    const increaseItem = () => {
+        if (inp > 9) {
+        } else {
+            setInp(inp + 1)
+        }
+    }
+
+    return (
         <div className="cart-items">
             <div className='item-img'>
-                <img src={item.image} alt='miniature produit'/>
+                <img src={item.image} alt='miniature produit' />
             </div>
             <p className='item-title'>{item.name}</p>
             <p>{item.price} €</p>
 
-            <Quantity inp={inp} decreaseItem={decreaseItem} increaseItem={increaseItem}/>
+            <div className='item-qty'>
+                <button onClick={decreaseItem}>-</button>
+                <input min="1" max="10" value={inp} />
+                <button onClick={increaseItem}>+</button>
+
+            </div>
 
             <p>{item.price * inp} €</p>
         </div>
     );
 }
- 
+
 export default CartItem;
