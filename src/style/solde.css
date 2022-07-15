@@ -1,5 +1,4 @@
 #solde {
-    position: fixed;
     width: 100%;
     background-color: #F5F5F5;
     height: 5vh;
@@ -8,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
 }
 
 #solde span {

@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import './App.css';
 // Import des autres pages
@@ -30,8 +30,7 @@ function App() {
 
 
   const addCart = (x) => {
-      cart.push(x)
-      setCart(cart)
+      setCart([...cart, x])
       console.log('Objet ajouté')
       console.log(cart)
   }
@@ -48,7 +47,6 @@ function App() {
       console.log(fav)
   }
 
-  useEffect(() => setCart(cart), [cart])
 
   return (
     <>
