@@ -1,0 +1,36 @@
+.cart-container {
+    margin: 5vh 15vh;
+    display: grid;
+    gap: 10px;
+}
+
+.cart-title {
+    padding: 2% 4%;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 25% 1fr;
+    gap: 15px;
+}
+
+.cart-title h3 {
+    font-size: 0.9rem;
+}
+
+.total {
+    margin: 5vh 15vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+#somme {
+    font-weight: bold;
+}
+
+#payment {
+    cursor: pointer;
+    width: 130px;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+}

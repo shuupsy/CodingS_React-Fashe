@@ -1,14 +1,14 @@
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Banner from '../components/Banner'
 import "../style/about.css"
 import aboutImg from "../img/about_story.webp"
+
 const About = () => {
     return (
         <div className="about">
-            <Nav />
+            <Banner title='ABOUT' />
             <div className='containerAbout'>
                 <div className='aboutImg'>
-                    <img src={aboutImg} />
+                    <img src={aboutImg} alt='presentation about' />
                 </div>
                 <div>
                     <h1>Our story</h1>
@@ -16,7 +16,6 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

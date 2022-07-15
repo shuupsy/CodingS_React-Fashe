@@ -1,48 +1,59 @@
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Banner from '../components/Banner'
+import Solde from '../components/Solde'
 import ShowProduits from '../components/ShowProduits'
-import {items} from "../data/Items";
 import { BsSearch } from 'react-icons/bs'
 import '../style/products.css'
+import { useEffect, useState } from 'react';
 
-const Products = () => {
-    const Filter = (x) => {
-    
+const Products = ({ fav, cart, addCart, addFav }) => {
+
+    let [nbrCard, setNbrCard] = useState(document.querySelectorAll('.card').length)
+
+    const [activeCategory, setActiveCategory] = useState('')
+    const [search, setSearch] = useState('')
+
+    useEffect(() => setNbrCard(document.querySelectorAll('.card').length), [activeCategory])
+
+    let searchTerm = (e) => {
+        if (e.key === 'Enter') {
+            setSearch(e.target.value)
+            console.log(search)
         }
+    }
 
     return (
         <>
-            <Nav />
+            <Solde />
+            <Banner title='PRODUCT' commentary='New Arrivals New Collection' />
             <div className='products'>
 
                 <div className='menu'>
                     <div className='categories'>
                         <h2>Categories</h2>
                         <ul>
-                            <li onClick={() => Filter('all')}>All</li>
-                            <li onClick={() => Filter('women')}>Women</li>
-                            <li onClick={() => Filter('kids')}>Kids</li>
-                            <li onClick={() => Filter('men')}>Men</li>
-                            <li onClick={() => Filter('accessories')}>Accessories</li>
+                            <li onClick={() => setActiveCategory('')}>All</li>
+                            <li onClick={() => setActiveCategory('women')}>Women</li>
+                            <li onClick={() => setActiveCategory('kids')}>Kids</li>
+                            <li onClick={() => setActiveCategory('men')}>Men</li>
+                            <li onClick={() => setActiveCategory('accessories')}>Accessories</li>
                         </ul>
                     </div>
                     <div className='search'>
                         <h2>Filter</h2>
                         <div className='search-area'>
-                            <input type='text' placeholder='Search Products...' />
-                            <button><BsSearch/></button>
+                            <input type='text' placeholder='Search Products...' onKeyPress={e => searchTerm(e)} />
+                            <button><BsSearch /></button>
                         </div>
                     </div>
                 </div>
 
                 <div className='list'>
-                    <h3>Nombre de produits trouvés : {items.length}</h3>
-                    <ShowProduits />
+                    <h3>Nombre de produits trouvés : {nbrCard}</h3>
+                    <ShowProduits activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} addCart={addCart} addFav={addFav} cart={cart} fav={fav} />
                 </div>
             </div>
-            <Footer />
         </>
     );
 }
- 
+
 export default Products;

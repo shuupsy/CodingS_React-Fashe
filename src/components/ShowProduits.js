@@ -1,34 +1,23 @@
 import {items} from "../data/Items";
-import '../style/showproduits.css'
-// import { useState } from "react";
+import '../style/showproduits.css';
+import Card from '../components/Card'
 
-const ShowProduits = () => {
-    
-    // const [items, setItems] = useState({productsList})
+const ShowProduits = ({ activeCategory, setActiveCategory, search, setSearch, fav, cart, addFav, addCart}) => {
 
     return ( 
         <div className='container'>
-            {items.map(item => (
-                <div key={item.id} className='card'>
-                    <div className="card-img">
-                        <img src={item.image} alt={'photo produit' + item.nom} />
-                    </div>
-                {item.collection === 'new' && <span className="collection">New</span>} 
 
-                {item.sale? <span className="sale">Sale</span> : null}
+            {items.map((item) => (
 
-                    <div className="card-body">
-                        <h4>{item.name}</h4>
+                (!activeCategory || activeCategory === item.category ? 
 
-                {item.sale? <p className="solde"><span className="nosale">{item.price}€</span>&nbsp;
-                {item.price * 0.8}€</p>
-                : <p>{item.price}€</p>}
-                       
-                    </div>
-                </div>
-                
-            )
+                    (items.filter(item => item.category === activeCategory), 
+                    (<Card item={item} addCart={addCart} addFav={addFav} cart={cart} fav={fav} />))
+                    : null)
+
+            ) 
             )}
+
         </div>
      );
 }
