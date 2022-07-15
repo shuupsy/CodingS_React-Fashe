@@ -3,8 +3,9 @@ import '../style/card.css'
 import { BsHeart } from 'react-icons/bs'
 
 const Produit = ({ item, fav, cart, addCart, addFav }) => {
-    const [isHover, setIsHover] = useState(false)
 
+    const [isHover, setIsHover] = useState(false)
+    
     const MouseOver = () => {
         setIsHover(true)
     }

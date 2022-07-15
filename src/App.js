@@ -28,6 +28,7 @@ function App() {
       console.log(fav)
   }
 
+
   return (
     <>
       <Nav fav={fav} cart={cart} />

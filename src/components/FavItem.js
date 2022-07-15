@@ -26,7 +26,8 @@ const FavItem = ({ fav, item }) => {
             </div>
 
             <p className='item-title'>{item.name}</p>
-            <p>{item.price} €</p>
+            {item.sale ? <p className="solde"><span className="nosale">{item.price}€</span>&nbsp; {item.price * 0.8}€</p>
+            : <p>{item.price} €</p>}
 
             <div className='item-qty'>
                 <button onClick={decreaseItem}>-</button>
@@ -34,7 +35,9 @@ const FavItem = ({ fav, item }) => {
                 <button onClick={increaseItem}>+</button>
             </div>
 
-            <p>{item.price * inp} €</p>
+            {item.sale ? <p className="solde"><span className="nosale">{item.price * inp}€</span>&nbsp; {item.price * 0.8 * inp}€</p>
+            : <p>{item.price * inp} €</p>}
+            
             <button className='item-add'>ADD</button>
         </div>
     );

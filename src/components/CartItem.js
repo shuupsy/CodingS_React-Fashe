@@ -25,16 +25,20 @@ const CartItem = ({ cart, item }) => {
                 <img src={item.image} alt='miniature produit' />
             </div>
             <p className='item-title'>{item.name}</p>
-            <p>{item.price} €</p>
+
+            {item.sale ? <p className="solde"><span className="nosale">{item.price}€</span>&nbsp; {item.price * 0.8}€</p>
+            : <p>{item.price} €</p>}
 
             <div className='item-qty'>
                 <button onClick={decreaseItem}>-</button>
                 <input min="1" max="10" value={inp} />
                 <button onClick={increaseItem}>+</button>
-
             </div>
 
-            <p>{item.price * inp} €</p>
+            {item.sale ? <p className="solde"><span className="nosale">{item.price * inp}€</span>&nbsp; {item.price * 0.8 * inp}€</p>
+            : <p>{item.price * inp} €</p>}
+
+        
         </div>
     );
 }
