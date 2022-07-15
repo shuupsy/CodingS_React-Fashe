@@ -14,3 +14,23 @@
 .cart-title h3 {
     font-size: 0.9rem;
 }
+
+.total {
+    margin: 5vh 15vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+#somme {
+    font-weight: bold;
+}
+
+#payment {
+    cursor: pointer;
+    width: 130px;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+}

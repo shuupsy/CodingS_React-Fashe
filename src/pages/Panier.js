@@ -2,8 +2,7 @@ import Banner from '../components/Banner';
 import CartItem from '../components/CartItem';
 import '../style/panier.css'
 
-const Panier = ({ cart }) => {
-
+const Panier = ({ cart, addCart, removeCart }) => {
     return (
         <div className="panier">
             <Banner title='PANIER' />
@@ -18,11 +17,17 @@ const Panier = ({ cart }) => {
                 </div>
                 <div className='items-container'>
                     {cart.map(item =>
-                    <CartItem item={item} />)} 
+                        <CartItem item={item} addCart={addCart} removeCart={removeCart} />)}
                 </div>
-            
-                </div>
-        </div> );
+            </div>
+
+            <div className='total'>
+                <p>TOTAL : <span id='somme'>{cart.reduce((x, y) => y.price + x, 0)} €</span></p>
+
+                <button id='payment'>PROCEED TO PAYMENT</button>
+            </div>
+
+        </div>);
 }
- 
+
 export default Panier;

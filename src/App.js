@@ -20,7 +20,16 @@ function App() {
 
   const addCart = (x) => {
       cart.push(x)
+      setCart(cart)
+      console.log('Objet ajouté')
       console.log(cart)
+  }
+
+  const removeCart = (x) => {
+    setCart(cart.splice(cart.indexOf(x),1));
+    setCart(cart)
+    console.log('Objet supprimé')
+    console.log(cart)
   }
 
   const addFav = (x) => {
@@ -41,7 +50,7 @@ function App() {
 
         <Route path='/products' element={<Products addCart={addCart} addFav={addFav} cart={cart} fav={fav} />}  />
 
-        <Route path='/panier' element={<Panier cart={cart} />} />
+        <Route path='/panier' element={<Panier cart={cart} addCart={addCart} removeCart={removeCart} />} />
 
         <Route path='/coup-de-coeur' element={<Coeur fav={fav} />} />
 
