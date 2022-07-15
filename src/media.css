@@ -1,5 +1,9 @@
 @media screen and (max-width: 768px) {
     .products {
-        margin: 5vh;
+        grid-template-columns: 1fr !important;
+    }
+    .ftr-1 {
+        grid-template-columns: 1fr !important;
+        text-align: center;
     }
 }

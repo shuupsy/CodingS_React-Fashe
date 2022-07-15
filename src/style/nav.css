@@ -7,8 +7,7 @@ nav {
     justify-content: space-between;
     align-items:center;
     padding: 2vh 5vh;
-    z-index: 99999;
-    
+    position:relative;
 }
 
 nav ul, .icones{
@@ -53,7 +52,7 @@ nav ul, .icones{
     gap: 15px;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .dropdown button {

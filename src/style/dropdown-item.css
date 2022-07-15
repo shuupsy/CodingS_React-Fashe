@@ -1,6 +1,8 @@
 .drop-item {
     display: flex;
-    gap: 15px;
+    padding: 10px 0;
+    gap: 10px;
+    border-bottom: 1px solid rgb(204, 201, 201);
 }
 
 .drop-text {
@@ -29,3 +31,4 @@
     font-weight: normal;
     color: grey;
 } 
+

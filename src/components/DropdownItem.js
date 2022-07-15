@@ -9,8 +9,8 @@ const DropdownItem = ({ di }) => {
             <div className="drop-text">
                 <h2>{di.name}</h2>
 
-                {di.sale ? <p className="solde"><span className="nosale">{di.price}€</span>&nbsp; {di.price * 0.8}€</p>
-            : <p>{di.price} €</p>}
+                {di.sale ? <h3><span style={{textDecoration: 'line-through'}}>{di.price}€</span>&nbsp; <span style={{color: 'red'}}>{di.price * 0.8}€</span></h3>
+            : <h3>{di.price} €</h3>}
 
             </div>
         </div>

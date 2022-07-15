@@ -1,6 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
 import { BsHeart, BsBag } from 'react-icons/bs'
-import { useState } from 'react'
 import '../style/nav.css'
 import logo from '../img/logo.png'
 
@@ -19,13 +18,14 @@ const Nav = ({cart, isDropdown, showDropdown}) => {
             <ul className='icones'>
                 <NavLink to={'/coup-de-coeur'}><BsHeart /></NavLink>
                 <li>|</li>
-                <li onClick={showDropdown} className='icon-cart'>
+                <li className='icon-cart' onClick={showDropdown}>
                     <BsBag />
                     <span className='number-items'>{cart.length}</span>
                 </li>
             </ul>
 
         {isDropdown && <div className='dropdown'>
+            {cart.length === 0 && <p>Le panier est vide.</p>}
             {cart.map(di => <DropdownItem di={di} /> )}
             <p>Total : {cart.reduce((x, y) => y.price + x, 0)} €</p>
             <Link to='/panier'><button>VIEW CART</button></Link>
