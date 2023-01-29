@@ -1,5 +1,3 @@
-FASHE
-
 ## FRANÇAIS (eng below)
 ### Contexte
 
